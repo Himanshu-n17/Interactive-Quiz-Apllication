@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Quiz App (API)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="quiz-container" id="quizContainer">
+      <h1>Random Quiz</h1>
+
+      <!-- Score and Timer Row -->
+      <div class="info-bar">
+        <div class="score-display">Score: <span id="liveScore">0</span></div>
+        <div class="timer-display">Time Left: <span id="timer">15</span>s</div>
+      </div>
+
+      <div class="question" id="question">Loading quiz...</div>
+      <div class="options" id="options"></div>
+
+      <button class="next-btn" id="nextButton" style="display: none">
+        Next
+      </button>
+
+      <div
+        class="score-container"
+        id="scoreContainer"
+        style="display: none"
+      ></div>
+      <button class="restart-btn" id="restartButton" style="display: none">
+        Restart Quiz
+      </button>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
