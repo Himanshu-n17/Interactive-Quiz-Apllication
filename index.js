@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const API_URL = "https://opentdb.com/api.php?amount=100&type=multiple";
+
   let allQuestions = [];
   let selectedQuestions = [];
   const totalQuestions = 10;
