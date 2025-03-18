@@ -1,9 +1,9 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const API_URL = "https://opentdb.com/api.php?amount=100&type=multiple";
 
+  const totalQuestions = 10;
   let allQuestions = [];
   let selectedQuestions = [];
-  const totalQuestions = 10;
   let currentQuestionIndex = 0;
   let score = 0;
   let timer;
@@ -17,6 +17,34 @@ document.addEventListener("DOMContentLoaded", function () {
   const liveScoreElement = document.getElementById("liveScore");
   const timerElement = document.getElementById("timer");
 
+  const themeToggle = document.getElementById("themeToggle");
+
+  // === Theme Management ===
+  function setTheme(isDark) {
+    if (isDark) {
+      document.body.classList.add("dark-mode");
+      themeToggle.textContent = "☀️ Bright";
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.body.classList.remove("dark-mode");
+      themeToggle.textContent = "🌙 Dark";
+      localStorage.setItem("theme", "light");
+    }
+  }
+
+  function loadTheme() {
+    const savedTheme = localStorage.getItem("theme");
+    setTheme(savedTheme === "dark");
+  }
+
+  themeToggle.addEventListener("click", () => {
+    const isDark = document.body.classList.contains("dark-mode");
+    setTheme(!isDark);
+  });
+
+  loadTheme(); // Load saved theme on page load
+
+  // === Quiz Code ===
   async function fetchQuestions() {
     try {
       questionElement.textContent = "Loading quiz...";
@@ -33,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
       startQuiz();
     } catch (error) {
       console.error("Error fetching questions:", error);
-      questionElement.textContent = "Failed to load quiz. Please refresh.";
+      questionElement.textContent = "Failed to load quiz. Please refresh!";
     }
   }
 
@@ -185,6 +213,5 @@ document.addEventListener("DOMContentLoaded", function () {
   nextButton.addEventListener("click", nextQuestion);
   restartButton.addEventListener("click", restartQuiz);
 
-  // Fetch and start the quiz on page load
   fetchQuestions();
 });
