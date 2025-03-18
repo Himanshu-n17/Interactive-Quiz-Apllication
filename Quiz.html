@@ -3,12 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Random Quiz App (API)</title>
+    <title>Interactive Quiz App (Online)</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="quiz-container" id="quizContainer">
-      <h1>Random Quiz</h1>
+      <div class="header-bar">
+        <h1>Interactive Quiz</h1>
+        <button id="themeToggle" class="theme-toggle-btn">🌙 Dark</button>
+      </div>
 
       <!-- Score and Timer Row -->
       <div class="info-bar">
@@ -28,6 +31,7 @@
         id="scoreContainer"
         style="display: none"
       ></div>
+
       <button class="restart-btn" id="restartButton" style="display: none">
         Restart Quiz
       </button>
