@@ -20,18 +20,15 @@ An **Interactive Quiz App** built using **HTML**, **CSS**, and **JavaScript**. T
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
-✅ **10-question quiz** pulled from OpenTDB API  
-✅ **Multiple categories** and **difficulties**  
-✅ **Timer countdown** for each question (default: 15 seconds)  
-✅ **Score tracker** (Live Score & Final Score)  
-✅ **Next question** button & **Restart quiz**  
-✅ **Light / Dark theme toggle** 🌙☀️  
-✅ Saves your theme preference with **localStorage**  
-✅ Fully **responsive** (Mobile & Desktop friendly)  
-✅ Smooth **animations** and **transitions**  
-✅ Clean and **modern UI**
+✅ **Fetches 100 questions** in real-time from a reliable external API  
+✅ **Randomly selects 10 unique questions** for each quiz session to ensure variety and unpredictability  
+✅ Built-in **countdown timer** for each question (default: 15 seconds), adding excitement and urgency  
+✅ Real-time **score tracking**, with both live score updates and a final score summary  
+✅ Seamless navigation with **Next Question** and **Restart Quiz** options for continuous play  
+✅ **Light/Dark theme toggle** 🌙☀️ with **automatic theme preference saving** using `localStorage`  
+✅ Fully **responsive design**, optimized for both mobile and desktop devices, delivering a smooth and engaging **user experience**
 
 ---
 
